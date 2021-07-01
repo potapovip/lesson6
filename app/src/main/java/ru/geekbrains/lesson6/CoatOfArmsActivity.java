@@ -25,9 +25,7 @@ public class CoatOfArmsActivity extends AppCompatActivity {
             CoatOfArmsFragment details = new CoatOfArmsFragment();
             details.setArguments(getIntent().getExtras());
             // Добавим фрагмент на activity
-            getSupportFragmentManager()
-                    .beginTransaction()
-                    .replace(R.id.fragment_container, details).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, details).commit();
         }
     }
 }

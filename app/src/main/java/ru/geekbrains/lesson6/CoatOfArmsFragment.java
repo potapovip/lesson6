@@ -13,7 +13,7 @@ import android.view.ViewGroup;
 
 public class CoatOfArmsFragment extends Fragment {
 
-    private static final String ARG_INDEX = "index";
+    public static final String ARG_INDEX = "index";
     private int index;
 
     // Фабричный метод создания фрагмента

@@ -1,5 +1,6 @@
 package ru.geekbrains.lesson6;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -39,6 +40,15 @@ public class CitiesFragment extends Fragment {
         for(int i=0; i < cities.length; i++){
             String city = cities[i];
             TextView tv = new TextView(getContext());
+            int finalI = i;
+            tv.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(getActivity(),CoatOfArmsActivity.class);
+                    intent.putExtra(CoatOfArmsFragment.ARG_INDEX, finalI);
+                    startActivity(intent);
+                }
+            });
             tv.setText(city);
             tv.setTextSize(30);
             layoutView.addView(tv);
